@@ -1,18 +1,28 @@
 const express = require('express')
 const app = express()
 const port = 5000;
+const path =require('path')
+console.log(__dirname,'public');
+
+const publicPath =path.join(__dirname,'public');
+ app.use(express.static(publicPath))
 
 app.get("/", (req, resp) => {
-    resp.send(
-        '<h1>Welcome to Home page</h1> <a href="/About">Go to about page</a>  '
+    resp.sendFile('${publicPath}/index.html'
+
 
 
     );
 })
 
 app.get("/About", (req, resp) => {
-    resp.send(
-        ' <h1>welcome to about page</h1> <a href="/">Go to home page</a>'
+    resp.sendFile('${publicPath}/about.html'
+
+    );
+})
+app.get("/contact", (req, resp) => {
+    resp.sendFile('${publicPath}/contact.html'
+
     );
 })
 
