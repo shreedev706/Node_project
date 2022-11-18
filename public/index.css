@@ -1,0 +1,15 @@
+
+
+div a.navbar-brand{
+    margin-left: 10px;
+}
+div ul.navbar-nav{
+    margin-left: 900px;
+}
+
+ul li.nav-item {
+    
+    margin-left:20px;
+    /* color:red; */
+}
+
