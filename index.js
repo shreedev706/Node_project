@@ -12,4 +12,20 @@ app.get("/", (req, resp) => {
 
 
 
-    );new 
+    );
+})
+
+app.get("/About", (req, resp) => {
+    resp.sendFile('${publicPath}/about.html'
+
+    );
+})
+app.get("/contact", (req, resp) => {
+    resp.sendFile('${publicPath}/contact.html'
+
+    );
+})
+
+app.listen(port, () => {
+    console.log('Listening at ${port}')
+})
